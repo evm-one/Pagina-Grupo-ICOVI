@@ -342,7 +342,7 @@ button {
 }
 
 .nav__logo-img {
-    height: 44px;
+    height: 80px;
     width: auto;
     object-fit: contain;
     transition: filter 0.3s;
