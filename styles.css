@@ -314,26 +314,33 @@ button {
     left: 0;
     right: 0;
     z-index: 1000;
-    transition: background 0.3s var(--ease-in-out), box-shadow 0.3s var(--ease-in-out);
+
+    background: transparent;
+
+    transition:
+        background 0.3s var(--ease-in-out),
+        box-shadow 0.3s var(--ease-in-out);
 }
 
-.site-header.is-scrolled {
-    background: var(--color-white);
-    box-shadow: 0 1px 0 var(--color-border), 0 4px 16px rgba(0,24,69,0.06);
-}
+.site-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
 
-.nav {
-    position: relative;
-}
+    height: 100px;
+    pointer-events: none;
 
-.nav__container {
-    display: flex;
-    align-items: center;
-    gap: var(--sp-6);
-    max-width: var(--max-width);
-    margin-inline: auto;
-    padding-inline: var(--container-px);
-    height: 120px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.95) 0%,
+        rgba(255,255,255,0.65) 30%,
+        rgba(255,255,255,0.25) 60%,
+        rgba(255,255,255,0) 100%
+    );
+
+    transition: opacity 0.3s ease;
 }
 
 .nav__logo {
