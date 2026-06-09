@@ -319,14 +319,14 @@ button {
 
 .site-header.is-scrolled {
     background: var(--color-white);
-    box-shadow: 0 1px 0 var(--color-border), 0 4px 16px rgba(0,24, 69,
+    box-shadow: 0 1px 0 var(--color-border), 0 4px 16px rgba(0,24, 69,0.06);
 }
 
-•nav {
+.nav {
     position: relative;
 }
 
-•nav_container {
+.nav_container {
    display: flex;
    align-items: center;
    gap: var(--sp-6);
